@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat clicker app</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <ul class="cat__list js-cats-list"></ul>
+    <section class="cat__preview js-cat-preview">
+        <p class="cat__click-counter js-counter"></p>
+        <p>Selected cat: <span class="cat__name js-selected-cat"></span></p>
+        <img class="cat__image js-img" src="" alt="">
+    </section>
+    <div class="admin">
+        <div class="admin__button-container">
+            <button type="button" class="button js-admin-button">Admin</button>
+        </div>
+        <form class="admin__form form js-form">
+            <input class="form__input" type="text" value=""/>
+            <input class="form__input" type="text" value=""/>
+            <input class="form__input" type="text" value=""/>
+            <div class="form__button-container">
+                <button type="button" class="button js-form-cancel">Cancel</button>
+                <button type="button" class="button js-form-save">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
