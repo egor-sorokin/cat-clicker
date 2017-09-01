@@ -6,13 +6,25 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-<div>
-    <ul class="cat__list js-cats-list"></ul>
-    <section class="cat__preview js-cat-preview">
-        <p class="cat__click-counter js-counter"></p>
-        <p>Selected cat: <span class="cat__name js-selected-cat"></span></p>
-        <img class="cat__image js-img" src="" alt="">
-    </section>
+<main class="wrapper">
+    <div class="cat">
+        <div class="column">
+            <section class="cat__list-container">
+                <h1 class="cat__title">Choose a cat:</h1>
+                <ul class="cat__list js-cats-list"></ul>
+            </section>
+        </div>
+        <div class="column">
+            <section class="cat__preview js-cat-preview">
+                <img class="cat__image js-img" src="" alt="">
+                <div class="cat__description">
+                    <h2 class="cat__description-title">Selected cat: <span class="cat__name js-selected-cat"></span></h2>
+                    <p class="cat__click-counter">Likes: <span class="js-counter"></span></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
     <div class="admin">
         <div class="admin__button-container">
             <button type="button" class="button js-admin-button">Admin</button>
@@ -27,7 +39,7 @@
             </div>
         </form>
     </div>
-</div>
+</main>
 
 <script src="js/script.js"></script>
 </body>

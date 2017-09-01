@@ -110,7 +110,6 @@
       var currentCat = controller.getCurrentCat();
 
       self.catImg.setAttribute('src', currentCat.img);
-      self.catImg.setAttribute('style', 'width:200px; height:auto;');
       self.catSelectedContainer.innerText = currentCat.name;
       self.counter.innerText = controller.getCounterValue();
     }
@@ -139,6 +138,7 @@
 
         domElem = document.createElement('li');
         domElem.innerText = cat.name;
+        domElem.classList.add('cat__list-item');
 
         domElem.addEventListener('click', (function (catCopy) {
           return function () {
