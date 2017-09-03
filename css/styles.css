@@ -1,19 +1,140 @@
 * {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    font-size: 100%;
     box-sizing: border-box;
 }
 
+html,
 body {
+    height: 100%;
+
+    line-height: 1;
     background-color: #fff;
+    font-family: "Avenir Next", sans-serif;
 }
 
-li {
+a:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul, ol {
     list-style: none;
 }
 
-.cat__list {
+h1, h2, h3,
+h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: none;
+    background-color: #fff;
+    border: none;
+}
+
+.wrapper {
+    padding-bottom: 100px;
+}
+
+.cat {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+}
+
+.column {
+    flex-basis: 50%;
+}
+
+.column:first-child {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cat__preview {
+    padding: 70px 70px;
+
+    background-color: crimson;
+}
+
+.cat__image {
+    width: 100%;
+    height: auto;
+}
+
+.cat__description {
+    margin-top: 20px;
+
+    font-family: "Avenir Next", sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.cat__click-counter {
+    margin-top: 10px;
+}
+
+.cat__name {
+    margin-bottom: 10px;
+}
+
+.cat__list {
+    margin-top: 20px;
+
+    width: 100%;
+}
+
+.cat__list-container {
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+
+    max-width: 270px;
+    width: 100%;
+}
+
+.cat__list-item {
+    padding: 8px 15px;
+
+    border: 2px solid crimson;
+    border-radius: 2px;
+
+    font-size: 18px;
+    font-family: "Avenir Next", sans-serif;
+
+    transition: color 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.cat__list-item:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+.cat__list-item:hover {
+    background-color: crimson;
+
+    color: aliceblue;
+}
+
+.admin {
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+.admin__form {
+    margin-top: 25px;
 }
 
 .form {
@@ -21,5 +142,50 @@ li {
 }
 
 .form.show {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    max-width: 300px;
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+.form__input {
+    flex-basis: 30%;
+
+    padding: 10px 5px;
+    margin-top: 40px;
+
+    border-bottom: 2px solid rgba(220, 20, 60, 0.5);
+}
+
+.form__button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+.button {
+    max-width: 270px;
+
+    padding: 8px 15px;
+
+    border: 2px solid crimson;
+    border-radius: 2px;
+
+    font-size: 18px;
+    font-family: "Avenir Next", sans-serif;
+
+    transition: color 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.button:hover {
+    background-color: crimson;
+
+    color: aliceblue;
 }
