@@ -74,10 +74,6 @@ button {
 
 .cat__description {
     margin-top: 20px;
-
-    font-family: "Avenir Next", sans-serif;
-    font-size: 20px;
-    color: aliceblue;
 }
 
 .cat__click-counter {
@@ -125,6 +121,10 @@ button {
     background-color: crimson;
 
     color: aliceblue;
+}
+
+.cat__nicknames {
+    margin-top: 20px;
 }
 
 .admin {
@@ -187,5 +187,15 @@ button {
 .button:hover {
     background-color: crimson;
 
+    color: aliceblue;
+}
+
+.text {
+    color: aliceblue;
+}
+
+.title {
+    font-family: "Avenir Next", sans-serif;
+    font-size: 20px;
     color: aliceblue;
 }

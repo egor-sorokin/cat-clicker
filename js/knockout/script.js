@@ -3,6 +3,9 @@ var ViewModel = function () {
   this.name = ko.observable('Li');
   this.imgSrc = ko.observable('https://www.petfinder.com/wp-content/uploads/2012/11/91615172-find-a-lump-on-cats-skin-632x475.jpg');
   this.imgAttribution = ko.observable('https://www.petfinder.com/wp-content/uploads/2012/11/91615172-find-a-lump-on-cats-skin-632x475.jpg');
+  this.nicknames = ko.observableArray([
+    'Amigo', 'Dj'
+  ]);
 
   this.incrementCounter = function () {
     this.clickCount(this.clickCount() + 1);
