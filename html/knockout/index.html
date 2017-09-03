@@ -9,20 +9,22 @@
 <main class="wrapper">
     <div class="cat">
         <div class="column">
-            <section class="cat__preview">
-                <img class="cat__image" src="" alt="" data-bind="click: incrementCounter, attr: {src: imgSrc}">
-                <div class="cat__description">
-                    <h2 class="cat__description-title title">Selected cat: <span class="cat__name" data-bind="text: name"></span></h2>
-                    <h2 class="cat__description-title title">Current level: <span class="cat__level" data-bind="text: level"></span></h2>
-                    <p class="cat__click-counter text">Likes: <span class="" data-bind="text: clickCount"></span></p>
-                </div>
-                <section class="cat__nicknames text">
-                    <h2 class="title">Nicknames:</h2>
-                    <ul data-bind="foreach: nicknames">
-                        <li class="text" data-bind="text: $data"></li>
-                    </ul>
+            <div data-bind="with: currentCat">
+                <section class="cat__preview">
+                    <img class="cat__image" src="" alt="" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
+                    <div class="cat__description">
+                        <h2 class="cat__description-title title">Selected cat: <span class="cat__name" data-bind="text: name"></span></h2>
+                        <h2 class="cat__description-title title">Current level: <span class="cat__level" data-bind="text: level"></span></h2>
+                        <p class="cat__click-counter text">Likes: <span class="" data-bind="text: clickCount"></span></p>
+                    </div>
+                    <section class="cat__nicknames text">
+                        <h2 class="title">Nicknames:</h2>
+                        <ul data-bind="foreach: nicknames">
+                            <li class="text" data-bind="text: $data"></li>
+                        </ul>
+                    </section>
                 </section>
-            </section>
+            </div>
         </div>
     </div>
 </main>
