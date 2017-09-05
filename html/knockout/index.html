@@ -9,6 +9,14 @@
 <main class="wrapper">
     <div class="cat">
         <div class="column">
+            <section class="cat__list-container">
+                <h1 class="cat__title">Choose a cat:</h1>
+                <ul class="cat__list" data-bind="foreach: catList">
+                    <li class="cat__list-item" data-bind="text: name, click: $parent.setCurrentCat"></li>
+                </ul>
+            </section>
+        </div>
+        <div class="column">
             <div data-bind="with: currentCat">
                 <section class="cat__preview">
                     <img class="cat__image" src="" alt="" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">

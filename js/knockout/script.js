@@ -57,21 +57,24 @@
   var ViewModel = function () {
     var self = this;
 
-    this.catList = ko.observableArray([]);
+    self.catList = ko.observableArray([]);
 
     initialCats.forEach(function (i) {
       self.catList.push(new Cat(i));
     });
 
-    this.currentCat = ko.observable(this.catList()[0]);
+    self.currentCat = ko.observable(self.catList()[0]);
 
-    this.incrementCounter = function () {
+
+    self.incrementCounter = function () {
       self.currentCat().clickCount(self.currentCat().clickCount() + 1);
+    };
+
+    self.setCurrentCat = function (clickedCat) {
+      self.currentCat(clickedCat);
     };
   };
 
-
   ko.applyBindings(new ViewModel());
-
 
 })();
